@@ -20,6 +20,16 @@
         padding: 3rem 1rem;
         text-align: center;
       }
+      
+      .header-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        gap: 2rem;
+        flex-wrap: wrap;
+        margin-bottom: 2rem;
+      }
+      
       header h1 {
         margin: 0;
         font-size: 2.8rem;
@@ -69,10 +79,20 @@
         border-radius: 5px;
         font-weight: bold;
         transition: background 0.3s;
+        cursor: pointer;
+        border: none;
+        font-size: 1rem;
+        font-family: "Georgia", serif;
       }
       .cta:hover {
         background: #4e342e;
       }
+      
+      .cta-center {
+        text-align: center;
+        margin: 2rem 0;
+      }
+      
       footer {
         background-image: url("./imagens/Fundo.png");
         color: #825028;
@@ -96,10 +116,16 @@
       .logo-photo {
         width: 400px;
         height: auto;
-        /* border-radius: 20px; */
-        /* box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); */
-        /* margin-bottom: 1rem; */
       }
+      
+      .header-photo {
+        width: 200px;
+        height: auto;
+        border-radius: 15px;
+        box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+        filter: brightness(0.9);
+      }
+      
       .elegant-section {
         background-color: rgba(255, 255, 255, 0.8);
         padding: 3rem;
@@ -124,17 +150,40 @@
         font-size: 1.1rem;
         text-align: justify;
       }
+      
+      @media (max-width: 768px) {
+        .header-container {
+          flex-direction: column;
+        }
+        .logo-photo, .header-photo {
+          width: 250px;
+        }
+        .author-photo {
+          width: 300px;
+        }
+      }
     </style>
   </head>
   <body>
     <header>
-      <img
-        src="./imagens/logo-escrita.png"
-        alt="Logo Diário da Alma."
-        class="logo-photo"
-      />
-      <!-- <h1>Diário da Alma</h1> -->
-      <!-- <p>Descubra o que a sua alma precisa ouvir.</p> -->
+      <div class="header-container">
+        <img
+          src="./imagens/imagem3.jpeg"
+          alt="Foto do autor Fabiano Dias Rodrigues"
+          class="header-photo"
+        />
+        <img
+          src="./imagens/logo-escrita.png"
+          alt="Logo Diário da Alma."
+          class="logo-photo"
+        />
+      </div>
+      <div class="cta-center">
+        <a
+          href="https://editorasa.com.br/catalogo/diario-da-alma-descubra-o-que-sua-alma-precisa-ouvir/"
+          class="cta"
+        >Adquirir Agora</a>
+      </div>
     </header>
 
     <section class="elegant-section">
@@ -160,6 +209,12 @@
         julgar ou corrigir, mas simplesmente observar, ouvir e aceitar a si
         mesmo em sua totalidade, com todas as suas complexidades e contradições.
       </p>
+      <div class="cta-center">
+        <a
+          href="https://editorasa.com.br/catalogo/diario-da-alma-descubra-o-que-sua-alma-precisa-ouvir/"
+          class="cta"
+        >Adquirir Agora</a>
+      </div>
     </section>
 
     <section class="author-section">
@@ -169,10 +224,14 @@
         class="author-photo"
       />
       <p class="bio">
-        Fabiano é um escritor apaixonado por temas espirituais, autoconhecimento
-        e transformação interior. Sua escrita é marcada pela sensibilidade e
-        profundidade, tocando os corações de seus leitores.
+        Sou um escritor movido pela paixão por temas ligados ao autoconhecimento e à transformação interior. Busco que minha escrita, guiada por uma sensibilidade sinuosa, toque suavemente o coração dos leitores.
       </p>
+      <div class="cta-center">
+        <a
+          href="https://editorasa.com.br/catalogo/diario-da-alma-descubra-o-que-sua-alma-precisa-ouvir/"
+          class="cta"
+        >Quero o meu!</a>
+      </div>
     </section>
 
     <section class="livro">
